@@ -1,8 +1,8 @@
 # Quotes
 
-# Micah Thorstensen and Jerome Joof
+## Micah Thorstensen and Jerome Joof
 
-# App.java
+## App.java
 - reasQuote()
 - getRandomQuote()
 
