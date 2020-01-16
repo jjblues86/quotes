@@ -1,4 +1,7 @@
 # Quotes
+
+# Micah Thorstensen and Jerome Joof
+
 Given a JSON formatted file containing objects with:  
     ```
     1. String[] tags  
