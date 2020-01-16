@@ -18,7 +18,7 @@ Create a list of Quote objects from these JSON objects.
 ## HOW TO RUN:
 Run Main method.  Main method returns a String with author and associated quote.
 
-## Dependencie
+## Dependencies
 - implementation 'com.google.code.gson:gson:2.8.6'
 
       
