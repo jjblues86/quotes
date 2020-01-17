@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URL;
 
 
 public class TestApp {
@@ -46,5 +48,11 @@ public class TestApp {
                 assertEquals(actualFormattedQuote, nextQuote);
             }
         }
+    }
+    @Test
+    public void testBadApiEndpoint(){
+
+        String URL = "https://icanhazdadjoke.com/ggfd";
+        App.displayJokesToTerminal(URL);
     }
 }
