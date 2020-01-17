@@ -27,9 +27,8 @@ public class App {
 
     }
 
-    public static boolean readQuoteFromApi(String URL) throws IOException {
+    public static void readQuoteFromApi(String URL) throws IOException {
 
-        boolean flag;
 
         URL iCanHaveBadJokesUrl= new URL(URL);
 
@@ -51,15 +50,16 @@ public class App {
         DadJokes dadJoke = gson.fromJson(quotesString.toString(), DadJokes.class);
         System.out.println("dadJoke = " + dadJoke.toString());
 
-       if(dadJoke.toString() != null){
-           flag = true;
 
-       } else{
-           flag = false;
-       }
+        // write to json file
+        File localMachineJsonQuotesFile = new File("src/main/resources/quotesDAD.json");
+        FileWriter quoteFileWriter = new FileWriter(localMachineJsonQuotesFile, true);
 
-       return flag;
-
+        BufferedWriter buffWriter = new BufferedWriter(quoteFileWriter);
+        buffWriter.newLine();
+        buffWriter.append(quotesString.toString());
+        buffWriter.newLine();
+        buffWriter.close();
     }
 
     public static void readQuoteFromLocalMachine(){
